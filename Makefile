@@ -11,7 +11,7 @@ INCLUDES+=-I$(SDKSTAGE)/opt/vc/include/ -I$(SDKSTAGE)/opt/vc/include/interface/v
 all: $(BIN) $(LIB)
 
 %.o: %.c
-  @rm -f $@ 
+	@rm -f $@ 
 	$(CC) $(CFLAGS) $(INCLUDES) -g -c $< -o $@ -Wno-deprecated-declarations
 
 %.o: %.cpp
